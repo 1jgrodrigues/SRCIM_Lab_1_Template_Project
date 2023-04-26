@@ -1,1 +1,1 @@
-http://10.22.125.107:7778/acc
+http://ZenBook-Osvaldo:7778/acc

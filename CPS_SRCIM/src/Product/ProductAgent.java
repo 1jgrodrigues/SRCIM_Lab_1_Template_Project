@@ -42,6 +42,14 @@ public class ProductAgent extends Agent {
 
         ACLMessage msgCNT=new ACLMessage(ACLMessage.CFP);
         try {
+            if (executionPlan == null || executionPlan.isEmpty()) {
+                System.err.println("676775");
+                return;
+            }
+            if (executionPlan.size() < 2) {
+                System.err.println("888");
+                return;
+            }
             DFAgentDescription[] dfAgentDescriptions = DFInteraction.SearchInDFByName(executionPlan.get(0),this);
             msgCNT.addReceiver(dfAgentDescriptions[0].getName());
         } catch (FIPAException e) {
